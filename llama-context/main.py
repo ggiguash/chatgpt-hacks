@@ -16,7 +16,7 @@ def read_from_storage(persist_dir):
 
 def adding_data_to_GPT():
     print("Adding data to GPT...")
-
+ 
     persist_dir = "./storage"
     data_dir = "./data"
     index = None
