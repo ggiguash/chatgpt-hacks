@@ -10,7 +10,7 @@ VPYTHON="${VENV}/bin/python3"
 echo "Creating venv in '${VENV}' and installing packages..."
 python3 -m venv "${VENV}"
 
-base_packs="pip python-dotenv llama-index"
+base_packs="pip python-dotenv llama-index python-bidi"
 for pack in ${base_packs}; do
     ${VPYTHON} -m pip install --upgrade "${pack}"
 done

@@ -1,6 +1,7 @@
 import os
 import openai
 from dotenv import load_dotenv
+from bidi.algorithm import get_display
 from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader, StorageContext, load_index_from_storage
 
 def build_storage(data_dir):
@@ -44,7 +45,8 @@ def run_query_loop():
             print("Exiting...")
             break
         response = query_engine.query(query)
-        print(response)
+        bidi_text = get_display(str(response))
+        print(bidi_text)
 
 if __name__ == "__main__":
     set_openai_api_key()
