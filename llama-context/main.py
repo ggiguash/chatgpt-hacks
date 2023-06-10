@@ -38,7 +38,7 @@ def set_openai_api_key():
 
 def run_query_loop():
     query_engine = adding_data_to_GPT()
-    while True:      
+    while True:
         query = input("\nQuery: ")
         if query == "":
             print("Exiting...")
