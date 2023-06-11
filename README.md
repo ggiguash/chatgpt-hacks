@@ -28,8 +28,8 @@ Download your context information into the `data` directory.
 
 ### Project-Specific Prerequisites
 The [LLama Index](./llama-index/) code uses OpenAI ChatGPT API, which requires a
-key for connecting the server. Create the `llama-index/.env` file containing your
-OpenAI API Key.
+key for connecting to the server. Create the `llama-index/.env` file containing
+your OpenAI API Key.
 ```
 OPENAI_API_KEY=<your_openai_api_key>
 ```
