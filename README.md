@@ -1,9 +1,11 @@
 # ChatGPT Hacks
 
 ## Project Index
-* [LLama Index](./llama-index): Inspired by [How to Add Context to OpenAI GPT with LlamaIndex](https://medium.com/cyberark-engineering/how-to-add-context-to-openai-gpt-with-llama-index-1c33c6a44055).
+* [GPT LLama Index](./gpt-llama): Inspired by
+[How to Add Context to OpenAI GPT with LlamaIndex](https://medium.com/cyberark-engineering/how-to-add-context-to-openai-gpt-with-llama-1c33c6a44055).
 
-* [GPT4All](./gpt4all): Inspired by [GPT4All is the Local ChatGPT for Your Documents](https://artificialcorner.com/gpt4all-is-the-local-chatgpt-for-your-documents-and-it-is-free-df1016bc335)
+* [GPT4All](./gpt4all): Inspired by
+[GPT4All is the Local ChatGPT for Your Documents](https://artificialcorner.com/gpt4all-is-the-local-chatgpt-for-your-documents-and-it-is-free-df1016bc335)
 
 ## Prerequisites
 Change the current directory into one of the sub-projects and use the `make`
@@ -27,8 +29,8 @@ Download your context information into the `data` directory.
 > ```
 
 ### Project-Specific Prerequisites
-The [LLama Index](./llama-index/) code uses OpenAI ChatGPT API, which requires a
-key for connecting to the server. Create the `llama-index/.env` file containing
+The [GPT LLama Index](./gpt-llama/) code uses OpenAI ChatGPT API, which requires
+a key for connecting to the server. Create the `gpt-llama/.env` file containing
 your OpenAI API Key.
 ```
 OPENAI_API_KEY=<your_openai_api_key>

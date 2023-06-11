@@ -15,9 +15,9 @@ def read_from_storage(persist_dir):
     storage_context = StorageContext.from_defaults(persist_dir=persist_dir)
     return load_index_from_storage(storage_context)
 
-def adding_data_to_GPT():
+def add_data_to_gpt():
     print("Adding data to GPT...")
- 
+
     persist_dir = "./storage"
     data_dir = "./data"
     index = None
@@ -37,17 +37,18 @@ def set_openai_api_key():
     print('Using the OPENAI_API_KEY environment variable...')
     openai.api_key = api_key
 
-def run_query_loop():
-    query_engine = adding_data_to_GPT()
-    while True:
-        query = input("\nQuery: ")
-        if query == "":
-            print("Exiting...")
-            break
-        response = query_engine.query(query)
-        bidi_text = get_display(str(response))
-        print(bidi_text)
+#
+# Main
+#
+set_openai_api_key()
+query_engine = add_data_to_gpt()
 
-if __name__ == "__main__":
-    set_openai_api_key()
-    run_query_loop()
+while True:
+    query = input("\nQuery: ")
+    if query == "":
+        print("Exiting...")
+        break
+    response = query_engine.query(query)
+    # This is necessary for displaying right-to-left language output
+    bidi_text = get_display(str(response))
+    print(bidi_text)
