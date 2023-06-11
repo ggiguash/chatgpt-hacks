@@ -13,7 +13,7 @@ Query: {query}
 """
 
 prompt = PromptTemplate(template=template, input_variables=["query"])
-llm = GPT4All(model=local_path, callbacks=callbacks, verbose=True)
+llm = GPT4All(model=local_path, backend='gptj', callbacks=callbacks, verbose=True)
 llm_chain = LLMChain(prompt=prompt, llm=llm, verbose=False)
 
 while True:
