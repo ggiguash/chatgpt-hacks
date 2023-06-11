@@ -19,7 +19,7 @@ if [ -f "${PYDEPS}" ] ; then
 fi
 
 if [ -f "${MODELDEPS}" ] ; then
-    wget -N -l1 -nd -e robots=off -P ./models/ -i "${MODELDEPS}"
+    wget -N -l1 -nd -e robots=off -P ./models/ -i "${MODELDEPS}" || true
 fi
 
 echo "Done!"
