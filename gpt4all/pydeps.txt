@@ -1,0 +1,11 @@
+faiss-cpu==1.7.4
+langchain==0.0.149
+llama-cpp-python
+pdf2image==1.16.3
+pygpt4all==1.0.1
+pyllamacpp==1.0.6
+pypdf==3.8.1
+pytesseract==0.3.10
+unstructured==0.6.5
+gpt4all
+sentence_transformers

@@ -1,4 +1,4 @@
-WGET_CMD:=wget -l1 -nd -e robots=off -P ./data/
+WGET_CMD:=wget -N -l1 -nd -e robots=off -P ./data/
 
 all:
 	@echo "Usage: make <config | run | clean | get URL=url | getall URL=url>"
@@ -21,4 +21,4 @@ run:
 	@./venv/bin/python main.py
 
 clean:
-	@rm -rf venv data storage
+	@rm -rf venv data storage models
