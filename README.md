@@ -47,10 +47,9 @@ $ make run
 Using the OPENAI_API_KEY environment variable...
 Adding data to GPT...
 
-Query: what's up?
+Query: what is the old english word for war?
 
-The context information is discussing the concept of war, including its causes,
-effects, and cultural and rationalist perspectives.
+The Old English word for war is "wyrre" and "werre".
 
 Query:
 Exiting...
