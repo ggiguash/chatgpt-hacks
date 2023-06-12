@@ -4,7 +4,7 @@
 * [GPT LLama Index](./gpt-llama): Inspired by
 [How to Add Context to OpenAI GPT with LlamaIndex](https://medium.com/cyberark-engineering/how-to-add-context-to-openai-gpt-with-llama-1c33c6a44055).
 
-* [GPT4All](./gpt4all): Inspired by
+* [GPT4All LangChain](./gpt4all-langchain): Inspired by
 [GPT4All is the Local ChatGPT for Your Documents](https://artificialcorner.com/gpt4all-is-the-local-chatgpt-for-your-documents-and-it-is-free-df1016bc335)
 
 ## Prerequisites
