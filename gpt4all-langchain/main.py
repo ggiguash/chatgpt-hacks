@@ -9,8 +9,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 # See https://github.com/nomic-ai/gpt4all/blob/main/gpt4all-chat/metadata/models.json
 # for a full list of GPT4All models
 local_path = './models/ggml-gpt4all-j-v1.3-groovy.bin'
-# Load data using UnstructuredLoader
-loader = DirectoryLoader("./data/")
 # See https://www.sbert.net/docs/pretrained_models.html
 # for the list of pretrained models
 embeddings = HuggingFaceEmbeddings(model_name='all-mpnet-base-v2')
@@ -31,13 +29,11 @@ def split_chunks(sources):
         chunks.append(chunk)
     return chunks
 
-
 def create_index(chunks):
     texts = [doc.page_content for doc in chunks]
     metadatas = [doc.metadata for doc in chunks]
     search_index = FAISS.from_texts(texts, embeddings, metadatas=metadatas)
     return search_index
-
 
 def similarity_search(query, index):
     # k is the number of similarity searched that matches the query
@@ -56,6 +52,11 @@ def similarity_search(query, index):
 #
 # Main
 #
+
+# Load data using UnstructuredLoader
+print("Adding data to GPT...")
+loader = DirectoryLoader("./data/")
+
 docs = loader.load()
 chunks = split_chunks(docs)
 index = create_index(chunks)
@@ -73,4 +74,5 @@ while True:
         break
     matched_docs, sources = similarity_search(query, index)
     context = "\n".join([doc.page_content for doc in matched_docs])
+    print(context)
     llm_chain.run(query)

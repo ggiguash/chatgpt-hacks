@@ -16,7 +16,7 @@ getall:
 	$(WGET_CMD) -r "$(URL)"
 
 run:
-	@find ./data -type f -exec file {} \; | grep -v " text" | awk -F: '{print $$1}' | xargs -n1 rm -f
+	@find ./data -type f -exec file {} \; | grep -Ev ' text|PDF document' | awk -F: '{print $$1}' | xargs -n1 rm -f
 	@du -sh ./data
 	@./venv/bin/python main.py
 
