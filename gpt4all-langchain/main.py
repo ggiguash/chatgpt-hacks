@@ -74,5 +74,4 @@ while True:
         break
     matched_docs, sources = similarity_search(query, index)
     context = "\n".join([doc.page_content for doc in matched_docs])
-    print(context)
     llm_chain.run(query)
